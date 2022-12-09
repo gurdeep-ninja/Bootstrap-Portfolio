@@ -80,6 +80,41 @@ a {
     color:#fff
 }
 
+/* Custom Jumbotron styles */
+
+/* Apply styles to the main jumbotron */
+.jumbotron {
+	background-image: url("../images/hero-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    height: calc(50vh - 25px);
+}
+
+/* Jumbotron copy text */
+.jumboCopy {
+	color: white;
+	text-align: center;
+    padding:calc(10vh - 25px) 0;
+    background-color:rgba(0, 0, 0,0.5);
+    width:100%;
+}
+
+/* Set display type to flex for jumbotron col-8 */
+.jumbotron .col-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set custom background colour for lead paragraph text */
+.jumboCopy .lead {
+    background-color:var(--theme-accent)
+}
+
+
 /* Minor media query tweeks */
 @media screen and (max-width:500px) {
     /* Make logo image sligtly smaller on small devices */
