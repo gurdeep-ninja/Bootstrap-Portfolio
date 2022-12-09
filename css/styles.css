@@ -114,6 +114,9 @@ a {
     background-color:var(--theme-accent)
 }
 
+.jumboHeroImage{
+    max-width:100%
+}
 
 /* Minor media query tweeks */
 @media screen and (max-width:500px) {
