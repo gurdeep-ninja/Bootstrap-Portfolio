@@ -1,4 +1,3 @@
-/* Base styles are reset in ./reset.css */
 /* Set CSS variables to reuse throughout website */
 :root {
     --theme-accent: #218AFF;
@@ -26,6 +25,7 @@ body {
     color: var(--theme-body-font-color);
     /* set whole body colour to white */
 }
+
 /* Reset styles for lists */
 ol,
 ul {
@@ -86,7 +86,6 @@ a {
     color: #fff
 }
 
-
 /* Override .navnar-dark link color */
 .navbar-dark .navbar-nav .nav-link {
     color:#fff
@@ -141,12 +140,6 @@ a {
 }
 
 /* Contact section */
-#contact-section .contact-details{
-    flex-direction: column; 
-    justify-content: space-around; 
-    flex:1;
-    align-items:start;
-  }
 
   /* Add a styles to h2 in contact section */
 #contact-section h2 {
