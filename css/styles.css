@@ -118,6 +118,16 @@ a {
     max-width:100%
 }
 
+/* Skill Section */
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    background-color: var(--theme-accent);
+}
+
 /* Minor media query tweeks */
 @media screen and (max-width:500px) {
     /* Make logo image sligtly smaller on small devices */
