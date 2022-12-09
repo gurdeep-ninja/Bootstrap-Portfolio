@@ -1,0 +1,90 @@
+/* Base styles are reset in ./reset.css */
+/* Set CSS variables to reuse throughout website */
+:root {
+    --theme-accent: #218AFF;
+    /* Primary accent / font colour */
+    --theme-bg-color: rgb(16, 16, 16);
+    /* Primary background colour */
+    --theme-bg-color-secondary: rgb(32, 32, 32);
+    /* Secondary background colour */
+    --theme-body-font-color: #fff;
+    --container-width: 100%;
+    /* Global default width for containers */
+    --container-width-medium: 75%;
+    --container-width-desktop: 960px;
+    /* Global default width for containers */
+}
+
+/* Set body styles */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Setting font to whole body */
+    line-height: 1.5;
+    /* Line height to 1.5x */
+    background-color: var(--theme-bg-color);
+    /* Background colour */
+    color: var(--theme-body-font-color);
+    /* set whole body colour to white */
+}
+
+/* Default link colour */
+a {
+    color: #fff;
+}
+
+/* Set a max-width for the main website container */
+.narrow {
+    max-width: 960px;
+}
+
+/* Header Styles */
+/* Override bootstrap .bg-dark background color*/
+.bg-dark {
+    background-color: var(--theme-bg-color-secondary)!important;
+}
+
+/* Set max width for header logo */
+.navbar-brand .logo {
+    max-width: 300px;
+}
+
+/* nav item (li) adjustments */
+.nav-item {
+    flex-shrink: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Adjusyt navbar-nav (ul) styles */
+.navbar-nav {
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+}
+
+/* Adjust nav link top/bottom padding */
+.nav-link {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+/* Adjust nav link hover colour */
+.nav-link:hover {
+    background-color: var(--theme-accent);
+    color: #fff
+}
+
+
+/* Override .navnar-dark link color */
+.navbar-dark .navbar-nav .nav-link {
+    color:#fff
+}
+
+/* Minor media query tweeks */
+@media screen and (max-width:500px) {
+    /* Make logo image sligtly smaller on small devices */
+    .navbar-brand .logo {
+        max-width: 250px;
+    }
+    
+}
