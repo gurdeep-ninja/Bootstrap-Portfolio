@@ -26,6 +26,13 @@ body {
     color: var(--theme-body-font-color);
     /* set whole body colour to white */
 }
+/* Reset styles for lists */
+ol,
+ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+}
 
 /* Default link colour */
 a {
@@ -36,6 +43,11 @@ a {
 .narrow {
     max-width: 960px;
 }
+
+/* Class for turning html element into display:flex */
+.flex {
+    display: flex;
+  }
 
 /* Header Styles */
 /* Override bootstrap .bg-dark background color*/
@@ -127,6 +139,14 @@ a {
     min-height: 50px;
     background-color: var(--theme-accent);
 }
+
+/* Contact section */
+#contact-section .contact-details{
+    flex-direction: column; /* Set the flexbox direction to dispaly in columns */
+    justify-content: space-around; /* Flexbox justify content */
+    flex:1;
+    align-items:start;
+  }
 
 /* Minor media query tweeks */
 @media screen and (max-width:500px) {
