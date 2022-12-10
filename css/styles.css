@@ -1,17 +1,9 @@
 /* Set CSS variables to reuse throughout website */
 :root {
-    --theme-accent: #218AFF;
-    /* Primary accent / font colour */
-    --theme-bg-color: rgb(16, 16, 16);
-    /* Primary background colour */
-    --theme-bg-color-secondary: rgb(32, 32, 32);
-    /* Secondary background colour */
+    --theme-accent: #218AFF;/* Primary accent / font colour */
+    --theme-bg-color: rgb(16, 16, 16);/* Primary background colour */
+    --theme-bg-color-secondary: rgb(32, 32, 32); /* Secondary background colour */
     --theme-body-font-color: #fff;
-    --container-width: 100%;
-    /* Global default width for containers */
-    --container-width-medium: 75%;
-    --container-width-desktop: 960px;
-    /* Global default width for containers */
 }
 
 /* Adds smooth scrolling for anchor links */
@@ -22,13 +14,9 @@ html {
 /* Set body styles */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* Setting font to whole body */
     line-height: 1.5;
-    /* Line height to 1.5x */
     background-color: var(--theme-bg-color);
-    /* Background colour */
     color: var(--theme-body-font-color);
-    /* set whole body colour to white */
 }
 
 /* Reset styles for lists */
@@ -72,7 +60,7 @@ a {
     text-align: center;
 }
 
-/* Adjusyt navbar-nav (ul) styles */
+/* Adjust navbar-nav (ul) styles */
 .navbar-nav {
     align-items: stretch;
     flex-wrap: wrap;
@@ -91,13 +79,12 @@ a {
     color: #fff
 }
 
-/* Override .navnar-dark link color */
+/* Override .navbar-dark link color */
 .navbar-dark .navbar-nav .nav-link {
     color:#fff
 }
 
 /* Custom Jumbotron styles */
-
 /* Apply styles to the main jumbotron */
 .jumbotron {
 	background-image: url("../images/hero-bg.jpg");
@@ -130,6 +117,7 @@ a {
     background-color:var(--theme-accent)
 }
 
+/* Jumbotron hero image style */
 .jumboHeroImage{
     max-width:100%
 }
@@ -143,9 +131,40 @@ main section:nth-child(even){
 
 /* My Work Section */
 
+/* Custom card style */
 .card {
-    border-color:rgba(72, 153, 247,0.5)
+    border-color:rgba(72, 153, 247,0.5);
+    position: relative;
 }
+
+/* Custom card body style */
+.card .card-body{
+        position: absolute;
+        background-color: var(--theme-bg-color);
+        bottom: 2em;
+        right: 0;
+        text-align: right;
+        width: 50%;
+        padding: 20px;
+        opacity: 0.96;
+        border: 3px solid var(--theme-accent);
+        border-right: none;
+}
+/* Custom style target all cards except first */
+.row div:nth-child(n+2) > .card .card-body {
+	width: 75%;
+}
+/* Apply image opacity & animation settings */
+.card img {
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+}
+
+/* On hover event on card image */
+.card:hover img {
+    opacity: 1; 
+}
+
 /* Skill Section */
 .skill {
     display: flex;
@@ -156,6 +175,7 @@ main section:nth-child(even){
     position: relative;
 }
 
+/* Span to hold skill checkbox icon */
 .skill span {
     position: absolute;
     font-size:1.5em;
@@ -171,6 +191,7 @@ main section:nth-child(even){
 #contact-section h2 {
     border-bottom:2px solid var(--theme-accent);
 }
+
 /* General style for section-container */
 .section-container {
     border-top: 8px solid var(--theme-accent);
@@ -178,23 +199,22 @@ main section:nth-child(even){
     padding-bottom: 3em;
 }
 
-
-
 /* Footer */
-
 .contact-details {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
+/* Set Footer link coour */
 footer a {
     color:var(--theme-accent)
 }
-
+/* Set footer link hover colour */
 footer a:hover {
     color: #fff
 }
+/* Set footer contact details section font size */
 .contact-details{
     font-size:1.5em
 }
