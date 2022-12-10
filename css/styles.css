@@ -27,13 +27,14 @@ ul {
   margin:0;
 }
 
+/* Heading 2 styles */
 h2 {
     font-weight:bold;
     font-size:3.5em
 }
 /* Default link colour */
 a {
-    color: #fff;
+    color: var(--theme-body-font-color);
 }
 
 /* Set a max-width for the main website container */
@@ -41,13 +42,7 @@ a {
     max-width: 960px;
 }
 
-/* Class for turning html element into display:flex */
-.flex {
-    display: flex;
-  }
-
-/* Override bootstrap btn style  */
-
+/* Override bootstrap btn hover style  */
 .btn:hover {
 	background-color: var(--theme-bg-color);
 	box-shadow: rgba(0, 88, 255, 0.7) 0px 0px 29px 0px;
@@ -86,12 +81,12 @@ a {
 /* Adjust nav link hover colour */
 .nav-link:hover {
     background-color: var(--theme-accent);
-    color: #fff
+    color: var(--theme-body-font-color);
 }
 
 /* Override .navbar-dark link color */
 .navbar-dark .navbar-nav .nav-link {
-    color:#fff
+    color:var(--theme-body-font-color);
 }
 
 /* Custom Jumbotron styles */
@@ -108,7 +103,7 @@ a {
 
 /* Jumbotron copy text */
 .jumboCopy {
-	color: white;
+	color: var(--theme-body-font-color);
 	text-align: center;
     padding:calc(10vh - 25px) 0;
     background-color:rgba(0, 0, 0,0.5);
@@ -133,14 +128,12 @@ a {
 }
 
 /* Main Section Styles*/
-
 /* Apply background colour to even section child elements */
 main section:nth-child(even){
     background-color: var(--theme-bg-color-secondary)
 }
 
 /* My Work Section */
-
 /* Custom card style */
 .card {
     border-color:rgba(72, 153, 247,0.5);
@@ -193,7 +186,7 @@ main section:nth-child(even){
     line-height: 1;
     top:5px;
     left:5px;
-    color:rgb(255, 255, 255)
+    color:var(--theme-body-font-color);
 }
 
 /* Contact section */
@@ -210,6 +203,7 @@ main section:nth-child(even){
 
 /* Footer */
 .contact-details {
+    display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
@@ -221,7 +215,7 @@ footer a {
 }
 /* Set footer link hover colour */
 footer a:hover {
-    color: #fff
+    color: var(--theme-body-font-color);
 }
 /* Set footer contact details section font size */
 .contact-details{
@@ -237,6 +231,7 @@ footer a:hover {
 }
 
 @media screen and (max-width:992px){
+    /* Adjust card body styles */
     .card .card-body,.row div:nth-child(n+2) .card .card-body{
         width:100%;
         bottom:0
