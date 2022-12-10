@@ -27,6 +27,10 @@ ul {
   margin:0;
 }
 
+h2 {
+    font-weight:bold;
+    font-size:3.5em
+}
 /* Default link colour */
 a {
     color: #fff;
@@ -42,6 +46,12 @@ a {
     display: flex;
   }
 
+/* Override bootstrap btn style  */
+
+.btn:hover {
+	background-color: var(--theme-bg-color);
+	box-shadow: rgba(0, 88, 255, 0.7) 0px 0px 29px 0px;
+}
 /* Header Styles */
 /* Override bootstrap .bg-dark background color*/
 .bg-dark {
@@ -151,7 +161,7 @@ main section:nth-child(even){
         border-right: none;
 }
 /* Custom style target all cards except first */
-.row div:nth-child(n+2) > .card .card-body {
+.row div:nth-child(n+2) .card .card-body {
 	width: 75%;
 }
 /* Apply image opacity & animation settings */
@@ -171,8 +181,9 @@ main section:nth-child(even){
     align-items: center;
     justify-content: center;
     min-height: 50px;
-    background-color: var(--theme-accent);
+    background-color: var(--theme-bg-color-secondary);
     position: relative;
+    border:1px solid var(--theme-accent);
 }
 
 /* Span to hold skill checkbox icon */
@@ -195,8 +206,6 @@ main section:nth-child(even){
 /* General style for section-container */
 .section-container {
     border-top: 8px solid var(--theme-accent);
-    padding-top: 3em;
-    padding-bottom: 3em;
 }
 
 /* Footer */
@@ -223,5 +232,13 @@ footer a:hover {
     /* Make logo image sligtly smaller on small devices */
     .navbar-brand .logo {
         max-width: 250px;
+    }
+
+}
+
+@media screen and (max-width:992px){
+    .card .card-body,.row div:nth-child(n+2) .card .card-body{
+        width:100%;
+        bottom:0
     }
 }
