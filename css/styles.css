@@ -152,6 +152,14 @@ a {
     padding-bottom: 3em;
 }
 
+.contact-details{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Footer */
+
 
 /* Minor media query tweeks */
 @media screen and (max-width:500px) {
