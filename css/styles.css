@@ -14,6 +14,11 @@
     /* Global default width for containers */
 }
 
+/* Adds smooth scrolling for anchor links */
+html {
+	scroll-behavior: smooth; /* Makes sure scrolling is smooth */
+}
+
 /* Set body styles */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -129,14 +134,35 @@ a {
     max-width:100%
 }
 
-/* Skill Section */
+/* Main Section Styles*/
 
+/* Apply background colour to even section child elements */
+main section:nth-child(even){
+    background-color: var(--theme-bg-color-secondary)
+}
+
+/* My Work Section */
+
+.card {
+    border-color:rgba(72, 153, 247,0.5)
+}
+/* Skill Section */
 .skill {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 50px;
     background-color: var(--theme-accent);
+    position: relative;
+}
+
+.skill span {
+    position: absolute;
+    font-size:1.5em;
+    line-height: 1;
+    top:5px;
+    left:5px;
+    color:rgb(255, 255, 255)
 }
 
 /* Contact section */
@@ -152,15 +178,26 @@ a {
     padding-bottom: 3em;
 }
 
-.contact-details{
+
+
+/* Footer */
+
+.contact-details {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-/* Footer */
+footer a {
+    color:var(--theme-accent)
+}
 
-
+footer a:hover {
+    color: #fff
+}
+.contact-details{
+    font-size:1.5em
+}
 /* Minor media query tweeks */
 @media screen and (max-width:500px) {
     /* Make logo image sligtly smaller on small devices */
